@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tilemap.tres" type="TileSet" id=1]
+[ext_resource path="res://Terrain_generator.gd" type="Script" id=2]
+[ext_resource path="res://generate_button.png" type="Texture" id=3]
+
+[node name="TileMap" type="TileMap"]
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+script = ExtResource( 2 )
+
+[node name="GenerateButton" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0.705882 )
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 3 )
+[connection signal="pressed" from="GenerateButton" to="." method="_on_GenerateButton_pressed"]

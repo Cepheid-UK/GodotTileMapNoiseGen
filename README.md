@@ -1,3 +1,3 @@
-﻿# Godot TileMap Generation using Perlin Noise
+﻿# Godot TileMap Generation using OpenSimplexNoise
 
 ![](demo.gif)
